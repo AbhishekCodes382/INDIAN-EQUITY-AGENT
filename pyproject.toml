@@ -1,0 +1,25 @@
+[project]
+name = "indian-equity-agent"
+version = "1.0.0"
+description = "Daily Paper-trading candidate generator for Indian Equities inder specified price brackets."
+requires-python = ">=3.11"
+readme = "README.md"
+
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 100
+target-version = ['py311']
+select = ['E', 'F', 'W', 'B', 'UP']
+ignore = ['E501']
+
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+
+
